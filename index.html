@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINER BOMB</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="part1">
+        <h1 class="head1">MINER BOMB</h1>
+        <button class="btn1" id="loadingBtn">LOADING....</button>
+        <button class="btn2 hidden" id="rulesBtn">RULES</button>
+
+        <!-- Game Rules Box -->
+        <div id="gameRules" class="rules hidden">
+            <button class="close-btn" id="closeRules">&times;</button>
+            <ul>
+                <li>Click on a tile to reveal it.</li>
+                <li>Some tiles contain numbers (1-10),and<br>
+                    others contain bomb.</li> 
+                 <li>score increases based on the <br>
+                    revealed number.</li> 
+                 <li>Avoid the bombs!</li>
+               
+            </ul>
+        </div>
+
+        <!-- START Button -->
+        <button class="btn3 hidden" id="playBtn">START</button>
+    </div>
+
+    <!-- Game Board -->
+    <div id="gameBoard" class="hidden">
+        <div class="scoreboard">
+            <button class="score-btn">Score: <span id="score">0</span></button>
+            <button class="high-btn">High Score: <span id="highScore">0</span></button>
+            <button class="mines-btn">Mines: <span id="mineCount">5</span></button>
+            <button class="timer-btn">Time Left: <span id="timer">60</span> sec</button>
+        </div>
+        <div class="grid" id="grid"></div>
+        <button id="replayButton" class="hidden" onclick="restartGame()">Replay</button>
+    </div>
+</body>
+</html>

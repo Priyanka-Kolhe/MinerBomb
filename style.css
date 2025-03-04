@@ -1,0 +1,262 @@
+body {
+    background: linear-gradient(to right, #9403ae, #1406ae);
+  }
+  .part1 {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+  
+  .head1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px; /* Slightly larger for a grand feel */
+    font-weight: bold;
+    color: #f8f2f2; /* Deep red for a rich, Italian look */
+    text-align: center;
+    letter-spacing: 3px; /* Adds an elegant spacing */
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  }
+  .hidden {
+      display: none;
+  }
+  
+  /* Button Styles */
+  .btn1, .btn2 {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px 30px;
+      margin: 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      
+  }
+  
+  .btn1 {
+      background: linear-gradient(to right, #76e818, #efd004);
+      border: none;
+      color: black;
+  }
+  
+  .btn2 {
+      background: linear-gradient(to right, #08b728, #dcd917);
+      border: none;
+      color: rgb(19, 4, 4);
+  }
+  
+  .btn1:hover {
+      background: linear-gradient(to right, #d61111, #a60aae);
+  }
+  
+  .btn2:hover {
+      background: linear-gradient(to right, #a02568, #e9f751);
+  }
+  /* Game Rules Box */
+  .rules {
+      position: relative;
+      border: 3px solid rgb(106, 147, 0);
+      height: 19rem;
+      width: 25rem;
+      text-align: left;
+      font-size: 20px;
+      border-radius: 10px;
+      background-color: rgb(232, 242, 174);
+      line-height: 2;
+      padding: 10px;
+      margin-left: 10rem;
+  }
+  
+  /* Cross (X) Button */
+  .close-btn {
+      position: absolute;
+      top: -22px;
+      right: -15px;
+      background: none;
+      border: none;
+      font-size: 40px;
+      font-weight: bold;
+      color: red;
+      cursor: pointer;
+  }
+  
+  .close-btn:hover {
+      color: red;
+  }
+  .btn3 {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+      background: linear-gradient(to right, #cfe64b, #44d644);
+      color: rgb(10, 6, 6);
+      border: none;
+      
+  }
+  
+  .btn3:hover {
+      background: linear-gradient(to right, #3541eb, #ea8149);
+  }
+  
+  /* Game Board Styling */
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 50px);
+      grid-template-rows: repeat(5, 50px);
+      gap: 5px;
+      margin: 20px auto;
+      justify-content: center;
+      width: fit-content;
+      margin-top:15rem;
+  }
+  
+  /* Individual Grid Cells */
+  .cell {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(250, 250, 246);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+      border: 2px solid black;
+  } 
+  .cell:hover {
+      background-color: #67bdd3;
+  }
+  .cell.revealed {
+      background-color: rgb(244, 192, 79);
+      cursor: default;
+  }
+  .cell.bomb {
+      background-color: red;
+  }
+  .score-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 15px 0;
+      
+  }
+  .score-btn {
+      background-color: #20ba2f;
+      color: white;
+      padding-left: 12px ;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: none;
+      margin-left: 12rem;
+      transform: scale(1.05);
+      opacity: 0.9;
+  } 
+  .high-btn {
+    background-color: #20ba2f;
+    color: white;
+    padding-left: 12px ;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    margin-left: 12rem;
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  .timer-btn {
+    background-color: #ef1919;
+    color: rgb(15, 9, 9);
+    padding-left: 12px ;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    margin-left: 12rem;
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  .mines-btn {
+    background-color: #20ba2f;
+    color: white;
+    padding-left: 12px ;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    margin-left: 12rem;
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  #replayButton {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #075f0b;
+      color: rgb(245, 241, 241);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+  }
+  #replayButton:hover {
+      transform: scale(1.1);
+      background-color: #03541b;
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (max-width: 768px) {
+        .rules {
+           height: 9rem;
+           width: 12rem;
+           font-size: 10px;
+        }
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .grid div {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+}
